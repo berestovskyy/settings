@@ -1,0 +1,6 @@
+[Midnight-Commander]
+editor_edit_confirm_save=false
+
+[Layout]
+message_visible=false
+menubar_visible=false

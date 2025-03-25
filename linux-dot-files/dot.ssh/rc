@@ -1,0 +1,1 @@
+[ -S "${SSH_AUTH_SOCK}" ] && ln -sf "${SSH_AUTH_SOCK}" ~/.ssh/ssh_auth_sock

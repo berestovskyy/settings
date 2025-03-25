@@ -1,0 +1,233 @@
+[
+    {
+        "key": "alt+f11",
+        "command": "editor.action.peekTypeDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+shift+=",
+        "command": "editor.action.goToTypeDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "shift+alt+r",
+        "command": "references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "shift+alt+f12",
+        "command": "-references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "ctrl+cmd+a",
+        "command": "git.commitStagedAmend"
+    },
+    {
+        "key": "ctrl+cmd+z",
+        "command": "git.undoCommit"
+    },
+    {
+        "key": "ctrl+cmd+r",
+        "command": "git.renameBranch"
+    },
+    {
+        "key": "ctrl+cmd+c",
+        "command": "git.checkout"
+    },
+    {
+        "key": "ctrl+cmd+b",
+        "command": "git.rebase"
+    },
+    {
+        "key": "ctrl+cmd+n",
+        "command": "git.branchFrom"
+    },
+    {
+        "key": "ctrl+cmd+s",
+        "command": "git.stash"
+    },
+    {
+        "key": "ctrl+cmd+v",
+        "command": "git.revertSelectedRanges",
+    },
+    {
+        "key": "ctrl+cmd+l",
+        "command": "git.stageSelectedRanges",
+    },
+    {
+        "key": "ctrl+cmd+u",
+        "command": "git.unstageSelectedRanges",
+    },
+    {
+        "key": "alt+l",
+        "command": "editor.action.revealDeclaration"
+    },
+    {
+        "key": "alt+t",
+        "command": "editor.action.goToTypeDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "alt+i",
+        "command": "editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "alt+r",
+        "command": "editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "alt+h",
+        "command": "editor.showCallHierarchy",
+        "when": "editorHasCallHierarchyProvider && editorTextFocus && !inReferenceSearchEditor"
+    },
+    {
+        "key": "shift+alt+i",
+        "command": "references-view.findImplementations"
+    },
+    {
+        "key": "alt+n",
+        "command": "references-view.next",
+        "when": "view.references-view.tree.visible"
+    },
+    {
+        "key": "shift+alt+n",
+        "command": "references-view.prev",
+        "when": "view.references-view.tree.visible"
+    },
+    {
+        "key": "alt+d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "alt+n",
+        "command": "search.action.focusNextSearchResult",
+        "when": "view.workbench.view.search.visible || inSearchEditor"
+    },
+    {
+        "key": "shift+alt+n",
+        "command": "search.action.focusPreviousSearchResult",
+        "when": "view.workbench.view.search.visible || inSearchEditor"
+    },
+    {
+        "key": "alt+n",
+        "command": "editor.action.accessibleDiffViewer.next",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "shift+alt+n",
+        "command": "editor.action.accessibleDiffViewer.prev",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "alt+n",
+        "command": "workbench.action.compareEditor.nextChange",
+        "when": "textCompareEditorVisible"
+    },
+    {
+        "key": "shift+alt+n",
+        "command": "workbench.action.compareEditor.prevChange",
+        "when": "textCompareEditorVisible"
+    },
+    {
+        "key": "alt+n",
+        "command": "editor.action.marker.nextInFiles",
+        "when": "view.workbench.explorer.fileView.visible || view.workbench.view.scm.visible || workbench.view.extensions || workbench.panel.markers"
+    },
+    {
+        "key": "shift+alt+n",
+        "command": "editor.action.marker.prevInFiles",
+        "when": "view.workbench.explorer.fileView.visible || view.workbench.view.scm.visible"
+    },
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
+        "key": "ctrl+cmd+[",
+        "command": "workbench.action.navigateBackInEditLocations"
+    },
+    {
+        "key": "ctrl+cmd+]",
+        "command": "workbench.action.navigateForwardInEditLocations"
+    },
+    {
+        "key": "cmd+]",
+        "command": "-editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+]",
+        "command": "-markdown.extension.onIndentLines",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+    },
+    {
+        "key": "cmd+[",
+        "command": "-editor.action.outdentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+[",
+        "command": "-markdown.extension.onOutdentLines",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+    },
+    {
+        "key": "ctrl+escape",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+escape",
+        "command": "focusSuggestion",
+        "when": "suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+    },
+    {
+        "key": "ctrl+escape",
+        "command": "toggleSuggestionDetails",
+        "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+escape",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "terminalFocus && terminalShellIntegrationEnabled && !accessibilityModeEnabled && terminalShellType == 'pwsh'"
+    },
+    {
+        "key": "ctrl+escape",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "config.terminal.integrated.shellIntegration.suggestEnabled && terminalFocus && terminalShellIntegrationEnabled && !accessibilityModeEnabled && terminalShellType == 'pwsh'"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "-editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "-focusSuggestion",
+        "when": "suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "-toggleSuggestionDetails",
+        "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "-workbench.action.terminal.sendSequence",
+        "when": "terminalFocus && terminalShellIntegrationEnabled && !accessibilityModeEnabled && terminalShellType == 'pwsh'"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "-workbench.action.terminal.sendSequence",
+        "when": "config.terminal.integrated.shellIntegration.suggestEnabled && terminalFocus && terminalShellIntegrationEnabled && !accessibilityModeEnabled && terminalShellType == 'pwsh'"
+    },
+]
