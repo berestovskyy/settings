@@ -155,6 +155,14 @@ In `App Shortcuts` add:
 * Menu title: `Quit Safari`
 * Keyboard shortcut: `Option + Command + Q`
 
+> To use Writing Tools:
+
+In `App Shortcuts` add:
+
+* Application: All Applications
+* Menu title: `Show Writing Tools`
+* Keyboard shortcut: `Shift + Command + '`
+
 > To use function keys:
 
 * Enable: Function Keys > Use F1, F2, etc keys as standard function keys.
