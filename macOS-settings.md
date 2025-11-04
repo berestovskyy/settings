@@ -1,5 +1,5 @@
-Setting Up macOS Sequoia 15.3.2
-===============================
+Setting Up macOS Tahoe 26.0.1
+=============================
 
 App Store > Sign in
 -------------------
@@ -30,20 +30,21 @@ System Settings > Appearance
 * Appearance: `Auto`
 * Sidebar icon size: `Large`
 
+System Settings > Menu Bar
+--------------------------
+
+* Set: Recent documents, applications, and servers: `15`
+* Disable: Menu Bar Controls > Siri
+* Disable: Menu Bar Controls > Spotlight
+* Disable: Menu Bar Controls > Bluetooth
+* Set: Menu Bar Controls > Sound: `Always Show`
+* Enable: Menu Bar Controls > Weather
+
 System Settings > Apple Intelligence & Siri
 -------------------------------------------
 
 * Enable: Extensions > ChatGPT > Use ChatGPT
 * Set: Siri Requests > Keyboard shortcut: `Press 🌐 S`
-
-System Settings > Control Center
---------------------------------
-
-* Set: Control Center Modules > Bluetooth: `Don't show in Menu Bar`
-* Set: Control Center Modules > Sound: `Always Show in Menu Bar`
-* Enable: Battery > Show Percentage
-* Set: Menu Bar Only > Spotlight: `Don't show in Menu Bar`
-* Set: Menu Bar Only > Siri: `Don't show in Menu Bar`
 
 System Settings > Desktop & Dock
 --------------------------------
@@ -78,11 +79,14 @@ System Settings > Spotlight
 
 * Prevent Spotlight from searching these locations: `~/tmp`
 
-System Settings > Screen Time
------------------------------
+System Settings > Wallpaper
+---------------------------
 
-* Enable: Limit Usage > App & Website Activity
-* Enable: Share across devices
+* Set: Landscapes > Goa Beaches
+
+**Search Privacy...**
+
+* Prevent Spotlight from searching these locations: `~/tmp`
 
 System Settings > Focus
 -----------------------
@@ -91,15 +95,16 @@ System Settings > Focus
 
 * Enable: Intelligent Breakthrough & Silencing
 
+System Settings > Screen Time
+-----------------------------
+
+* Enable: Share across devices
+
 System Settings > Lock Screen
 -----------------------------
 
 * Set: Turn display off on battery when inactive: `For 5 minutes`
 * Set: Turn display off on power adapter when inactive: `For 10 minutes`
-
-> To quickly switch display back on without a password:
-
-* Set: Require password after screen saver begins or display is turned off: `After 30 seconds`
 
 System Settings > Privacy & Security
 ------------------------------------
@@ -170,7 +175,6 @@ In `App Shortcuts` add:
 **Text Input > Edit...**
 
 * `Polish`
-* `ABC`
 * `Ukrainian`
 * `Russian - PC`
 
@@ -197,7 +201,7 @@ Setup printers.
 System Settings > General > Language & Region
 ---------------------------------------------
 
-At the very end, remove all the `Preffered Languages` but `English`
+At the very end, remove all the `Preferred Languages` but `English`
 
 Finder Settings
 ---------------
@@ -212,10 +216,6 @@ Safari Settings
 **General:**
 
 * Set: New tabs open with: `Empty Page`
-
-**Tabs:**
-
-* Set: Tab layout: `Compact`
 
 **Advanced:**
 
@@ -273,7 +273,7 @@ Terminal Settings
 
 **Profiles > Homebrew > Window:**
 
-* Set: Columns: `88` Rows: `28`
+* Set: Columns: `90` Rows: `30`
 
 **Profiles > Homebrew > Shell:**
 
@@ -322,8 +322,6 @@ Remove from Dock:
 * `Pages`
 * `App Store`
 * `System Settings`
-* `Google Chrome`
-* `Zoom`
 
 Keep in Dock:
 
@@ -332,16 +330,6 @@ Keep in Dock:
 * `Find My`
 * `iPhone Mirroring`
 * `Visual Studio Code`
-* `Slack`
-
-Pritunl Settings
-----------------
-
-* Generate profile URI
-* Run `pritunl` and import profile URI
-* Enable: Profile Settings > System Profile
-* Enable: Profile Settings > Autostart
-* Enable: Profile Settings > Disable DNS
 
 SSH Settings
 ------------
@@ -358,12 +346,6 @@ SSH Settings
       UseKeychain yes
       AddKeysToAgent yes
     ```
-
-Slack Settings
---------------e
-
-* Login with Google
-* Set: Slack > Settings > Appearance > Color Mode: `Dark`
 
 Visual Studio Code
 ------------------
@@ -414,7 +396,7 @@ Right-click on side bar and disable:
 
 * Remote Explorer
 * Makefile
-* GitLense
+* GitLens
 * Bazel
 
 Mail Settings

@@ -10,7 +10,7 @@ export EDITOR="mcedit"
 PS1="a@b %~ %# "
 
 if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+    FPATH=$(brew --prefix)/share/zsh-completions:~/.zfunc:$FPATH
     autoload -Uz compinit
     compinit
 fi
