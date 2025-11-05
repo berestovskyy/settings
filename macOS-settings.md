@@ -179,7 +179,7 @@ System Settings > Spotlight
 
 **Search Privacy...**
 
-* Prevent Spotlight from searching these locations: `~/tmp`
+* Prevent Spotlight from searching these locations: `~/tmp`, `/Volumes`
 
 System Settings > Wallpaper
 ---------------------------
