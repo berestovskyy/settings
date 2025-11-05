@@ -223,7 +223,11 @@ Setup printers.
 System Settings > General > Language & Region
 ---------------------------------------------
 
-At the very end, remove all the `Preferred Languages` but `English`
+At the very end, remove all the `Preferred Languages` but `English (US)`
+
+> To get the sign-in windows in English:
+
+Safari > Settings > Privacy > Manage Website Data > Remove All: google
 
 Finder Settings
 ---------------
