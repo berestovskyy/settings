@@ -14,3 +14,4 @@ if type brew &>/dev/null; then
     autoload -Uz compinit
     compinit
 fi
+export PATH="/opt/homebrew/opt/rustup/bin:$PATH"

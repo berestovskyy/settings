@@ -1,135 +1,22 @@
-Setting Up macOS Tahoe 26.0.1
-=============================
+Setting Up macOS Tahoe 26.1
+===========================
 
-App Store > Sign in
--------------------
-
-For some reason, the two-factor verification pop-up disappears if singing from the system settings.
-
-System Settings > Start Using iCloud
-------------------------------------
-
-* Enable: Saved to iCloud > See All > iCloud Drive > Desktop & Documents Folders
-
-System Settings > General > Time Machine
-----------------------------------------
-
-`Options` dialog:
-
-* Exclude these items from backups: `~/tmp`
-
-System Settings > Accessibility
--------------------------------
-
-* Enable: Motor > Pointer Control > Trackpad Options > Use trackpad for dragging
-* Set: Motor > Pointer Control > Trackpad Options > Dragging style: `Three Finger Drag`
-
-System Settings > Appearance
-----------------------------
-
-* Appearance: `Auto`
-* Sidebar icon size: `Large`
-
-System Settings > Menu Bar
+System Settings > Trackpad
 --------------------------
 
-* Set: Recent documents, applications, and servers: `15`
-* Disable: Menu Bar Controls > Siri
-* Disable: Menu Bar Controls > Spotlight
-* Disable: Menu Bar Controls > Bluetooth
-* Set: Menu Bar Controls > Sound: `Always Show`
-* Enable: Menu Bar Controls > Weather
+**Point & Click:**
 
-System Settings > Apple Intelligence & Siri
--------------------------------------------
-
-* Enable: Extensions > ChatGPT > Use ChatGPT
-* Set: Siri Requests > Keyboard shortcut: `Press 🌐 S`
-
-System Settings > Desktop & Dock
---------------------------------
-
-* Set: Dock > Magnification: `Large`
-* Enable: Automatically hide and show the Dock
-* Enable: Stage Manager
-
-> For `Command + N` and `Command + T` to always work as expected:
-
-* Set: Windows > Prefer tabs when opening documents: `never`
-
-> To restore full screen windows:
-
-* Disable: Windows > Close windows when quitting an application
+* Set: Tracking speed: `8/10`
+* Enable: Tap to click
 
 System Settings > Displays
 --------------------------
 
-* Set: Resolution > Scaled: `Larger Test`
+* Set: Resolution > Scaled: `Larger Text`
 
 **Night Shift:**
 
 * Set: Schedule: `Sunset to Sunrise`
-
-System Settings > Spotlight
----------------------------
-
-* Disable: Help Apple Improve Search
-
-**Search Privacy...**
-
-* Prevent Spotlight from searching these locations: `~/tmp`
-
-System Settings > Wallpaper
----------------------------
-
-* Set: Landscapes > Goa Beaches
-
-**Search Privacy...**
-
-* Prevent Spotlight from searching these locations: `~/tmp`
-
-System Settings > Focus
------------------------
-
-**Do Not Disturb:**
-
-* Enable: Intelligent Breakthrough & Silencing
-
-System Settings > Screen Time
------------------------------
-
-* Enable: Share across devices
-
-System Settings > Lock Screen
------------------------------
-
-* Set: Turn display off on battery when inactive: `For 5 minutes`
-* Set: Turn display off on power adapter when inactive: `For 10 minutes`
-
-System Settings > Privacy & Security
-------------------------------------
-
-* Enable: Location Services > Maps
-* Enable: Location Services > Siri
-* Enable: Location Services > System Services > Details... > Show location icon in Control Center
-
-System Settings > Touch ID & Password
--------------------------------------
-
-* Add Fingerprint: right index, right thumb, left index.
-
-System Settings > User & Groups
--------------------------------
-
-**Current User:**
-
-* Change icon
-* Enable: Allow user to reset password using Apple Account
-
-System Settings > Internet accounts
------------------------------------
-
-Add email accounts.
 
 System Settings > Keyboard
 -----------------------------
@@ -150,7 +37,7 @@ System Settings > Keyboard
 
 > To use `F11`:
 
-* Disable: Show Desktop > Show Desktop
+* Disable: Mission Control > Show Desktop
 
 > To avoid accidental quits from Safari:
 
@@ -175,8 +62,8 @@ In `App Shortcuts` add:
 **Text Input > Edit...**
 
 * `Polish`
-* `Ukrainian`
 * `Russian - PC`
+* `Ukrainian`
 
 * Configure: Spelling: `Set Up...`
 
@@ -185,13 +72,148 @@ In `App Shortcuts` add:
 * Enable: Dictation
 * Configure: Dictation > Languages
 
-System Settings > Trackpad
+Installing Dot Files
+--------------------
+
+* Terminal > Run `git` > Install command line developer tools
+* Run: `git clone https://github.com/berestovskyy/settings.git`
+* Run: `cd settings && make link-mac-dot-files`
+* Restart the terminal.
+
+> To fix `zsh compinit: insecure directories` message:
+
+* Run `compaudit | xargs chmod g-w`
+
+Installing Applications
+-----------------------
+
+* Run: `cd settings && make install-brew`
+* Run: `cd settings && make install-mac-apps`
+* Run: `autoload -Uz compinit && compinit`
+
+Terminal Settings
+-----------------
+
+**General:**
+
+* On startup, open new window with profile: `Homebrew`
+
+**Profiles:**
+
+* Select `Homebrew` and click `Default`
+
+**Profiles > Homebrew > Text:**
+
+* Font > Change... > `SF Mono Regular` > Size: `18pt`
+
+**Profiles > Homebrew > Window:**
+
+* Set: Columns: `90` Rows: `30`
+
+**Profiles > Homebrew > Shell:**
+
+* When the shell exits: `Close if the shell exited cleanly`
+
+**Profiles > Homebrew > Keyboard:**
+
+* Use Option as Meta key
+
+> To map `Shift + F1` to `F11`:
+
+* Double click `F11` key to edit > Key: `F1` Modifier: `Shift`
+* Repeat above for `F12-F20` keys
+
+System Settings > iCloud
+------------------------
+
+* Enable: Saved to iCloud > See All > iCloud Drive > Desktop & Documents Folders
+
+System Settings > General > Time Machine
+----------------------------------------
+
+`Options` dialog:
+
+* Exclude these items from backups: `~/tmp`
+
+System Settings > Accessibility
+-------------------------------
+
+* Enable: Motor > Pointer Control > Trackpad Options > Use trackpad for dragging
+* Set: Motor > Pointer Control > Trackpad Options > Dragging style: `Three Finger Drag`
+
+System Settings > Menu Bar
 --------------------------
 
-**Point & Click:**
+* Set: Recent documents, applications, and servers: `15`
+* Disable: Menu Bar Controls > Siri
+* Disable: Menu Bar Controls > Spotlight
+* Disable: Menu Bar Controls > Bluetooth
+* Set: Menu Bar Controls > Sound: `Always Show`
+* Enable: Menu Bar Controls > Weather
 
-* Set: Tracking speed: `7/10`
-* Enable: Tab to click
+System Settings > Apple Intelligence & Siri
+-------------------------------------------
+
+* Set: Siri Requests > Keyboard shortcut: `Press 🌐 S`
+* Enable: Extensions > ChatGPT > Use ChatGPT
+
+System Settings > Desktop & Dock
+--------------------------------
+
+* Set: Dock > Magnification: `Large`
+* Enable: Automatically hide and show the Dock
+* Enable: Stage Manager
+
+> For `Command + N` and `Command + T` to always work as expected:
+
+* Set: Windows > Prefer tabs when opening documents: `never`
+
+> To restore full screen windows:
+
+* Disable: Windows > Close windows when quitting an application
+
+System Settings > Spotlight
+---------------------------
+
+* Disable: Help Apple Improve Search
+
+**Search Privacy...**
+
+* Prevent Spotlight from searching these locations: `~/tmp`
+
+System Settings > Wallpaper
+---------------------------
+
+* Set: Landscapes > Goa Beaches
+
+System Settings > Lock Screen
+-----------------------------
+
+* Set: Turn display off on battery when inactive: `For 5 minutes`
+* Set: Turn display off on power adapter when inactive: `For 10 minutes`
+
+System Settings > Privacy & Security
+------------------------------------
+
+* Enable: Location Services > System Services > Details... > Show location icon in Control Center
+
+System Settings > Touch ID & Password
+-------------------------------------
+
+* Add Fingerprint: right index, right thumb, left index.
+
+System Settings > User & Groups
+-------------------------------
+
+**Current User:**
+
+* Change icon
+* Enable: Allow user to reset password using Apple Account
+
+System Settings > Internet accounts
+-----------------------------------
+
+Add email accounts.
 
 System Settings > Printers & Scanners
 -------------------------------------
@@ -256,57 +278,6 @@ Wikipedia Languages:
 * Русский
 * Українська
 
-Terminal Settings
------------------
-
-**General:**
-
-* On startup, open new window with profile: `Homebrew`
-
-**Profiles:**
-
-* Select `Homebrew` and click `Default`
-
-**Profiles > Homebrew > Text:**
-
-* Font > Change... > `SF Mono Regular` > Size: `18pt`
-
-**Profiles > Homebrew > Window:**
-
-* Set: Columns: `90` Rows: `30`
-
-**Profiles > Homebrew > Shell:**
-
-* When the shell exits: `Close if the shell exited cleanly`
-
-**Profiles > Homebrew > Keyboard:**
-
-* Use Option as Meta key
-
-> To map `Shift + F1` to `F11`:
-
-* Double click `F11` key to edit > Key: `F1` Modifier: `Shift`
-* Repeat above for `F12-F20` keys
-
-Terminal Profiles
------------------
-
-* Terminal > Run `git` > Install command line developer tools
-* Run: `git clone https://github.com/berestovskyy/settings.git`
-* Run: `cd settings && make link-mac-dot-files`
-* Restart the terminal.
-
-> To fix `zsh compinit: insecure directories` message:
-
-* Run `compaudit | xargs chmod g-w`
-
-Installing Applications
------------------------
-
-* Run: `cd settings && make install-brew`
-* Run: `cd settings && make install-mac-apps`
-* Run: `autoload -Uz compinit && compinit`
-
 Desktop Settings
 ----------------
 
@@ -320,6 +291,7 @@ Remove from Dock:
 * `Keynote`
 * `Numbers`
 * `Pages`
+* `Games`
 * `App Store`
 * `System Settings`
 
@@ -328,7 +300,6 @@ Keep in Dock:
 * `Calculator`
 * `Terminal`
 * `Find My`
-* `iPhone Mirroring`
 * `Visual Studio Code`
 
 SSH Settings
@@ -369,14 +340,14 @@ Extensions:
 * `GitLens`
 * `Hex Editor` -- skip
 * `Jupiter Keymap` -- skip
-* `Makefile Tools`
+* `Makefile Tools` -- skip
 * `Markdown All in One`
 * `Markdownlint`
 * `Motoko`
 * `pre-commit-vscode` -- skip
 * `Remote - SSH`
 * `rust-analyzer`
-* `shell-format`
+* `shell-format-rev`
 * `TODO Highlight`
 * `WebAssembly`
 * `WIT IDL`
@@ -432,6 +403,16 @@ Click date and time in the top-right corner of the menu bar:
 * Add: Weather "Forecast" widget 2x2
 * Add: Clock "City I" NYC-5 widget 1x1
 * Add: Stocks "Symbol" widgets 1x1
+
+Desktop Widgets
+---------------
+
+Right-click on the Desktop > Edit Widgets:
+
+* Add: Calendar "Month" widget 1x1
+* Add: Clock "City I" widget 1x1
+* Add: Calendar "Up next" widget 2x1
+* Add: Weather "Forecast" widget 2x2 or 2x1
 
 FaceTime Settings
 -----------------
