@@ -186,6 +186,11 @@ System Settings > Wallpaper
 
 * Set: Landscapes > Goa Beaches
 
+System Settings > Sound
+-----------------------
+
+* Se: Input: MacBook Microphone: Input volume: `7/7`
+
 System Settings > Lock Screen
 -----------------------------
 
@@ -214,6 +219,68 @@ System Settings > Internet accounts
 -----------------------------------
 
 Add email accounts.
+
+System Settings > Keyboard
+-----------------------------
+
+* Set: Key repeat rate: `Fast`
+* Set: Delay until repeat: `Short`
+* Set: Turn keyboard backlight off after inactivity: `After 10 Seconds`
+
+> To avoid accidental input source switches:
+
+* Set: Press 🌐 key to: `Do nothing` (instead use `Control + Space` to switch the input)
+
+> To use keyboard in dialogs:
+
+* Enable: Keyboard navigation
+
+**Keyboard Shortcuts...**
+
+> To use `F11`:
+
+* Disable: Show Desktop > Show Desktop
+
+> To avoid accidental quits from Safari:
+
+In `App Shortcuts` add:
+
+* Application: `Safari`
+* Menu title: `Quit Safari`
+* Keyboard shortcut: `Option + Command + Q`
+
+> To use Writing Tools:
+
+In `App Shortcuts` add:
+
+* Application: All Applications
+* Menu title: `Show Writing Tools`
+* Keyboard shortcut: `Shift + Command + '`
+
+> To use function keys:
+
+* Enable: Function Keys > Use F1, F2, etc keys as standard function keys.
+
+**Text Input > Edit...**
+
+* `Polish`
+* `Ukrainian`
+* `Russian - PC`
+
+* Configure: Spelling: `Set Up...`
+
+**Back to Keyboard:**
+
+* Enable: Dictation
+* Configure: Dictation > Languages
+
+System Settings > Trackpad
+--------------------------
+
+**Point & Click:**
+
+* Set: Tracking speed: `7/10`
+* Enable: Tab to click
 
 System Settings > Printers & Scanners
 -------------------------------------
