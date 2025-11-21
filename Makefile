@@ -37,7 +37,7 @@ install-brew::
 install-mac-apps::
 	@echo "==> Installing macOS applications..."
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	brew install diffusionbee visual-studio-code blender inkscape coreutils gawk mc 7zip rg watch wget zsh-completions clang-format cloc git htop rustup-init shfmt buildifier
+	brew install diffusionbee visual-studio-code blender inkscape coreutils gawk mc 7zip rg watch wget zsh-completions clang-format cloc git htop rustup-init shfmt buildifier rdfind
 	rustup-init --default-toolchain nightly
 	mkdir ~/.zfunc
 	rustup completions zsh > ~/.zfunc/_rustup
